@@ -9,20 +9,21 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+
+.container {
+  background-color: white;
+  opacity: .7;
+  border-radius: 25px;
+}
+
+</style>
 </head>
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Search bar -->
-  <br>
-  <div class="" id="searchForm">
-    <form id="gift-form">
-        <label class="white-text" for="gift-input">Add to your gift wishlist!</label>
-        <input class="input-field white" type="text" id="gift-input">
-        <input class="white-text" id="add-gift" type="submit" value="Submit">
-    </form>
-  </div>
-  <br>
+  
 
       
       <ul id="nav-mobile" class="sidenav">
@@ -34,13 +35,18 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Santa's Shopper</h1>
+      <h1 class="header center green-text">Santa's Shopper</h1>
       <div class="row center">
         <h5 class="header col s12 light">An Easy Guide To Make To Make Anyones Wishes Come True√</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
+      <br>
+  <div class="" id="searchForm">
+    <form id="gift-form">
+        <label class="white-text" for="gift-input">Add to your gift wishlist!</label>
+        <input class="input-field white" type="text" id="gift-input">
+        <input class="white-text" id="add-gift" type="submit" value="Submit">
+    </form>
+  </div>
+  <br>
       <br><br>
       
     </div>
@@ -63,7 +69,7 @@
         <!-- First column AKA picture & price -->
         <div class="col s8 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class=" red accent-4 medium material-icons">attach_money</i></h2>
+            <h2 class="center light-blue-text"><i class="medium material-icons">attach_money</i></h2>
             <!-- Product image goes here -->
             <div id="prodPrice">Price Here</div>
             <div id="prodImage">IMAGE HERE!!</div>
