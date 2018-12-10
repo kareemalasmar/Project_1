@@ -4,6 +4,9 @@ var youtubeKey = "AIzaSyBxpyfAxI6oQ0SmlVVG1RLx8ArXQGYpLyY";
 
 $("#add-gift").on("click", function(event){
     event.preventDefault();
+
+    $(".productInfo").empty();
+
     var productSearch = $("#gift-input").val().trim();
     $("#gift-input").val("");
     console.log(productSearch);
@@ -13,7 +16,7 @@ $("#add-gift").on("click", function(event){
     }).then(function(response) {
         var videoId = response.items[0].id.videoId;
         var video = $("<iframe>").attr({width: "560", height: "315", src: "https://www.youtube.com/embed/" + videoId, frameborder: "0", allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "allowfullscreen"});
-        $("#videoContainer").append(video);
+        $("#prodVideo").append(video);
     });
 
     $.ajax({
