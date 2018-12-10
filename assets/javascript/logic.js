@@ -36,6 +36,7 @@ $("#add-gift").on("click", function(event){
         // product link
         var productLink = response.items[0].productUrl;
         var link = $("<a>").attr({href: productLink, target: "_blank"}).text("Go to product!");
+        $("#prodBuy").append(link);
         // product description
         var productDescription = response.items[0].shortDescription;
         var description = $("<p>").text(productDescription);
@@ -43,9 +44,11 @@ $("#add-gift").on("click", function(event){
         // product rating
         var productRating = response.items[0].customerRating;
         var rating = $("<p>").text(productRating);
+        $("#prodRating").append(rating);
         // product stars
         var productStars = response.items[0].customerRatingImage;
         var stars = $("<img>").attr({src: productStars, alt: productRating + "/5 stars"});
+        $("#prodRating").append(stars);
     });
 });
 
