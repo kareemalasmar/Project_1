@@ -2,15 +2,23 @@
 $(document).ready(function(){
 
     var shoppingList = [];
+    var giftCount = 0
     
     function dumpButtons(){
         $("#buttons-view").empty();
         for(var i = 0; i < shoppingList.length; i++){
-            var button = $("<button>");
-            button.addClass("product-button").attr("data-name",shoppingList[i]).text(shoppingList[i]);
-            $("#buttons-view").append(button);
+            var span = $("<span>");
+            var giftButton = $("<button>");
+            var removeButton = $("<button>").addClass("removeButton").text("x");
+            giftButton.addClass("product-button").attr("data-name",shoppingList[i]).attr("id", "gift-" + giftCount).text(shoppingList[i]);
+            span.append(removeButton, giftButton);
+            $("#buttons-view").append(span);
         }
     }
+
+    $(document.body).on("click", ".removeButton", function(){
+        $(this).parent().remove();
+    });
     
     $("#add-gift").on("click", function(event){
         event.preventDefault();
@@ -18,6 +26,8 @@ $(document).ready(function(){
         shoppingList.push(newProduct);
         dumpButtons();
         $("#gift-input").val("");
+        
+
     });
     
     function displayProductData (){
