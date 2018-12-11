@@ -88,10 +88,26 @@ $(document).ready(function(){
         });
     }
     
+    var clearButton = $("<button>");
+    clearButton.attr("id", "clearButton").text("clear");
+    $("#clearButton").append(clearButton);
+    
+
+    $("#clearButton").on("click", function(){
+        $("#prodName").empty();
+        $("#prodPrice").empty();
+        $("#prodImage").empty();
+        $("#prodBuy").empty();
+        $("#prodDescription").empty();
+        $("#prodRating").empty();
+        $("#prodVideo").empty();
+    });
+
     $(document).on("click", ".product-button", displayProductData);
 
+    
     if (!Array.isArray(shoppingList)){
         shoppingList = [];
     }
     dumpButtons();
-})
+});
