@@ -4,124 +4,138 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>SantaShopper</title>
-  <!-- CSS  -->
+<!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<style>
-</style>
 </head>
+
+<!-- Body -->
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Search bar -->
-  <br>
-  
-  <br>
-      
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"></a>
-    </div>
-  </nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Search bar -->
+<br>
+<br>
+  <ul id="nav-mobile" class="sidenav">
+    <li><a href="#">Navbar Link</a></li>
+  </ul>
+
+  <a href="#" data-target="nav-mobile" class="sidenav-trigger"></a>
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br>
-       <!-- Header -->
-      <h1 class="header center black-text">Santa's Shopper</h1>
-      <div class="row center">
-          <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
-        <h4 class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
-        <div class="col s3 bold"></div>
-        <label class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
-        <div class="col s3 bold"></div>
-        <br>
-    </div>
-    <div class="row center">
-        <div class="header col s3 bold"></div>
-        <div class="col s6 bold center" id="searchForm">
-            <form id="gift-form">
-                <input class="input-field  center-align" type="text" id="gift-input">
-                <input class="white-text" id="add-gift" type="submit" value="Add more gifts">
-            </form>
-            <br>
-          </div>
-          <div class="header col s3 bold"></div>
-    </div>
-  </div>
-  <br>      
-  <br>  
   
+  <!-- Start container1 -->
   <div class="container">
-    <div class="section">
-      
-      <!-- Product name div -->
-      <br>
-      <div class="col s2 m4">
-        <!-- Buttons -->
-          <div class="center-align" id="buttons-view">BUTTONS HERE</div>
-          <!-- Product name -->
-          <div class="center center-align productInfo" id="prodName">PRODUCT NAME HERE</div>
-        </div>
-      <!-- End product div -->
-      <div class="row">
-        <!-- First column AKA picture & price -->
-        <div class="col s8 m4">
-          <div class="icon-block">
-            <!-- Icon -->
-            <h2 class="center light-blue-text"><i class="green-text medium material-icons">attach_money</i></h2>
-            <!-- Product price goes here -->
-            <div id="prodPrice" class="productInfo">PRICE HERE</div>
-            <br>
-            <!-- Product image goes here -->
-            <div id="prodImage" class="productInfo">IMAGE HERE!!</div>
-          </div>
-        </div>
-        
-        
-        <!-- Second column AKA Product description-->
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <!-- Icon -->
-            <h2 class="center light-blue-text"><i class="green-text medium material-icons">star_border</i></h2>
-            <!-- Product description goes here -->
-            <h5 class="center">Description:</h5>
-            <br>
-            <div id="prodDescription" class="productInfo">PRODUCT DESCRIPTION GOES HERE</div>
-            </div>
-        </div>
-        
-        <!-- Ratings and product link -->
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <!-- Icon-->
-            <h2 class="center light-blue-text"><i class="green-text medium material-icons">comment</i></h2>
-            <!-- Product rating goes here -->
-            <div id="prodRating" class="productInfo">RATINGS GO HERE</div>
-            <!-- Product link -->
-            <div id="prodBuy" class="productInfo"></div>
-            </div>
-          </div>
-        </div>
-        <br>
-        <!-- YouTube video section -->
-        <div class="col s12 m4 center-align">
-        <!-- Icon-->
-        <h2 class="center light-blue-text"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
-        <!-- Product youtube video -->
-        <h5 class="center">YouTube Review:</h5>
-        <br>
-        <div id="prodVideo" class="productInfo">
-      </div>
-    </div>
-      </div>
-    </div>
-    <br><br>
+<br>
+
+<!-- Header -->
+  <h1 class="header center black-text">Santa's Shopper</h1>
+
+  <div class="row center">
+<!-- GIF & text -->
+    <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
+    <h4 class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
+    <div class="col s3 bold"></div>
+    <label class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
+    <div class="col s3 bold"></div>
+    <br>
   </div>
-  
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/javascript/logic.js"></script>
-  
+  <!-- End container1 -->
+
+  <!-- Search section -->
+<div class="row center">
+  <!-- Empty row -->
+  <div class="header col s3 bold"></div>
+  <!-- Search bar -->
+  <div class="col s6 bold center" id="searchForm">
+    <form id="gift-form">
+    <input class="input-field  center-align" type="text" id="gift-input">
+    <input class="white-text" id="add-gift" type="submit" value="Add more gifts">
+    </form>
+    <br>
+  </div>
+</div>
+  <!-- End search bar -->
+  <!-- Empty row -->
+  <div class="header col s3 bold"></div>
+</div>
+<!-- End search section -->
+
+</div>
+<br>      
+<br>  
+
+<!-- Start container2 -->
+<div class="container">
+  <div class="section">
+
+<!-- Product name div -->
+    <br>
+    <div class="col s2 m4">
+  <!-- Buttons -->
+    <div class="center-align" id="buttons-view"></div>
+  <!-- Product name -->
+    <div class="center center-align productInfo" id="prodName"></div>
+    </div>
+  <!-- End product div -->
+    <div class="row">
+  <!-- First column AKA picture & price -->
+    <div class="col s8 m4">
+    <div class="icon-block">
+  <!-- Icon -->
+    <h2 class="center light-blue-text"><i class="green-text medium material-icons">attach_money</i></h2>
+  <!-- Product price goes here -->
+    <div id="prodPrice" class="productInfo"></div>
+    <br>
+  <!-- Product image goes here -->
+    <div id="prodImage" class="productInfo"></div>
+    </div>
+    </div>
+
+
+  <!-- Second column AKA Product description-->
+    <div class="col s12 m4">
+    <div class="icon-block">
+  <!-- Icon -->
+    <h2 class="center light-blue-text"><i class="green-text medium material-icons">star_border</i></h2>
+  <!-- Product description goes here -->
+    <h5 class="center">Description:</h5>
+    <br>
+    <div id="prodDescription" class="productInfo"></div>
+    </div>
+    </div>
+
+  <!-- Ratings and product link -->
+    <div class="col s12 m4">
+    <div class="icon-block">
+  <!-- Icon-->
+    <h2 class="center light-blue-text"><i class="green-text medium material-icons">comment</i></h2>
+  <!-- Product rating goes here -->
+    <div id="prodRating" class="productInfo"></div>
+  <!-- Product link -->
+    <div id="prodBuy" class="productInfo"></div>
+    </div>
+    </div>
+    </div>
+    <br>
+  <!-- YouTube video section -->
+    <div class="col s12 m4 center-align">
+  <!-- Icon-->
+    <h2 class="center light-blue-text"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
+  <!-- Product youtube video -->
+    <h5 class="center">YouTube Review:</h5>
+    <br>
+    <div id="prodVideo" class="productInfo">
+    </div>
+    </div>
+</div>
+</div>
+<br><br>
+</div>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/javascript/logic.js"></script>
+
 </body>
-x</html>
+</html>
