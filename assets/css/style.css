@@ -48,3 +48,8 @@ body{
       height: auto;
      }
 
+     #prodRating {
+       height: 60px;
+       width:auto;
+     }
+
