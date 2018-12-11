@@ -19,7 +19,7 @@ $("#add-gift").on("click", function(event){
         $("#prodName").append(name);
         // product price
         var productPrice = response.items[0].salePrice
-        var price = $("<h1>").text("$" + productPrice + " USD");
+        var price = $("<h5>").text("$" + productPrice + " USD");
         $("#prodPrice").append(price);
         // product image
         var productImage = response.items[0].largeImage;
