@@ -11,17 +11,23 @@ body{
        
      }
 
-     input[type=submit], .product-button, .removeButton {
+     
+
+     input[type=submit], .product-button, .removeButton, #prodBuy {
       padding:5px 15px; 
       background-color: green;
       border:0 none;
       cursor:pointer;
       -webkit-border-radius: 5px;
       border-radius: 5px; 
+      color: white;
+      align-content: center;
+       text-align: center;
   }
      
      p {
-       font-size: 25px;
+       font-size: 18px;
+       padding:3px;
      }
      
      img {
@@ -34,10 +40,6 @@ body{
      max-height:100%;
      }
      
-     #prodBuy {
-       text-align: center;
-       font-size: 20px;
-     }
      
      h5 {
        text-align: center;
@@ -81,6 +83,10 @@ body{
      }
      #youtube {
       font-family: 'Mountains of Christmas', cursive;
+     }
+
+     #prodName {
+       font-size: 22px;
      }
 
      

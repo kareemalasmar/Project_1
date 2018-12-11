@@ -50,7 +50,7 @@ $(document).ready(function(){
             console.log(response.items[0]);
             // product name 
             var productName = response.items[0].name;
-            var name = $("<h1>").text(productName);
+            var name = $("<h4>").text(productName);
             $("#prodName").append(name);
             // product price
             var productPrice = response.items[0].salePrice
