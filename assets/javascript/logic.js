@@ -2,15 +2,15 @@
 $(document).ready(function(){
 
     var shoppingList = [];
-    var giftCount = 0
+    
     
     function dumpButtons(){
         $("#buttons-view").empty();
         for(var i = 0; i < shoppingList.length; i++){
             var span = $("<span>");
             var giftButton = $("<button>");
-            var removeButton = $("<button>").addClass("removeButton").text("x");
-            giftButton.addClass("product-button").attr("data-name",shoppingList[i]).attr("id", "gift-" + giftCount).text(shoppingList[i]);
+            var removeButton = $("<button>").addClass("removeButton").text("✓");
+            giftButton.addClass("product-button").attr("data-name",shoppingList[i]).text(shoppingList[i]);
             span.append(removeButton, giftButton);
             $("#buttons-view").append(span);
         }
@@ -34,7 +34,6 @@ $(document).ready(function(){
         $(".productInfo").empty();
     
         var productSearch = $(this).attr("data-name");
-        console.log(productSearch);
         
         $.ajax({
             url: "http://cors-anywhere.herokuapp.com/https://api.walmartlabs.com/v1/search?apiKey=c2dsw2ypw9kedr4kky5vw7dk&numItems=1&query=" + productSearch,
@@ -67,7 +66,7 @@ $(document).ready(function(){
             $("#prodRating").append(rating);
             // product stars
             var productStars = response.items[0].customerRatingImage;
-            var stars = $("<img>").attr({src: productStars, alt: productRating + "/5 stars"});
+            var stars = $("<img>").addClass("stars").attr({src: productStars, alt: productRating + "/5 stars"});
             $("#prodRating").append(stars);
             $.ajax({
                 url: " https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&maxResults=1&key=AIzaSyBxpyfAxI6oQ0SmlVVG1RLx8ArXQGYpLyY&q=" + productName + " review",          
