@@ -12,7 +12,7 @@ body{
      }
      
      p {
-       font-size: 20px;
+       font-size: 25px;
      }
      
      img {
@@ -51,6 +51,25 @@ body{
      .The-stars {
        height: auto;
        width:100px;
+     }
+     #santa {
+      font-family: 'Mountains of Christmas', cursive;
+     }
+     #bio {
+       font-size: 35px;
+      font-family: 'Mountains of Christmas', cursive;
+     }
+     #bio2 {
+       font-weight: bold;
+       font-size: 25px;
+      font-family: 'Mountains of Christmas', cursive;
+     }
+     #description {
+       font-size: 25px;
+      font-family: 'Mountains of Christmas', cursive;
+     }
+     #youtube {
+      font-family: 'Mountains of Christmas', cursive;
      }
 
      

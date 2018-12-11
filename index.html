@@ -7,6 +7,7 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style>
 </style>
@@ -28,12 +29,12 @@
     <div class="container">
       <br>
        <!-- Header -->
-      <h1 class="header center black-text">Santa's Shopper</h1>
+      <h1 id="santa" class="header center black-text">Santa's Shopper</h1>
       <div class="row center">
           <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
-        <h4 class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
+        <h4 id="bio" class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
         <div class="col s3 bold"></div>
-        <label class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
+        <label id="bio2"class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
         <div class="col s3 bold"></div>
         <br>
     </div>
@@ -85,7 +86,7 @@
             <!-- Icon -->
             <h2 class="center light-blue-text"><i class="green-text medium material-icons">star_border</i></h2>
             <!-- Product description goes here -->
-            <h5 class="center">Description:</h5>
+            <h5 id="description" class="center">Description:</h5>
             <br>
             <div id="prodDescription" class="productInfo"></div>
             </div>
@@ -109,7 +110,7 @@
         <!-- Icon-->
         <h2 class="center light-blue-text"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
         <!-- Product youtube video -->
-        <h5 class="center">YouTube Review:</h5>
+        <h5 id="youtube" class="center">YouTube Review:</h5>
         <br>
         <div id="prodVideo" class="productInfo">
       </div>
