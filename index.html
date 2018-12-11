@@ -11,45 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style>
 
-.container {
-  background-color: white;
-  background: rgba(255,255,255,0.8);
-  border-radius: 25px;
-}
-.white-text {
-  background-color: green;
-}
-
-p {
-  font-size: 20px;
-}
-
-img {
-  max-width:100%;
-max-height:100%;
-}
-
-iframe {
-  max-width:100%;
-max-height:100%;
-}
-
-#prodBuy {
-  text-align: center;
-  font-size: 20px;
-}
-
-h5 {
-  text-align: center;
-}
-
-#prodDescription {
-  line-height: 1.6;
-  letter-spacing: 1.3;
-  font-weight: bold;
-}
-
-
 </style>
 </head>
 <body>
@@ -67,21 +28,23 @@ h5 {
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"></a>
     </div>
   </nav>
-  <div id="buttons-view"></div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br>
-      <h1 class="header center green-text">Santa's Shopper</h1>
+       <!-- Header -->
+      <h1 class="header center black-text">Santa's Shopper</h1>
       <div class="row center">
-        <h5 class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h5>
-      <br><br><br><br><br>
-  <div class="" id="searchForm">
+        <h4 class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
+        <div class="col s3 bold"></div>
+        <label class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
+        <div class="col s3 bold"></div>
+        <br>
+  <div class="col s12 bold" id="searchForm">
     <form id="gift-form">
-        <label class="black-text light" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
-        <h2 class="center light-blue-text"><i class="green-text medium material-icons">arrow_downward</i></h2>
         <input class="input-field white" type="text" id="gift-input">
         <input class="white-text" id="add-gift" type="submit" value="Add more gifts">
     </form>
+    <br>
 
   </div>
   <br>
@@ -96,21 +59,26 @@ h5 {
     <div class="section">
       
       <!-- Product name div -->
+      <br>
       <div class="col s2 m4">
+        <!-- Buttons -->
+          <div id="buttons-view center-align">BUTTONS HERE</div>
+          <!-- Product name -->
           <div class="center center-align productInfo" id="prodName">PRODUCT NAME HERE</div>
         </div>
       <!-- End product div -->
 
-      <!--   Icon Section   -->
       <div class="row">
 
         <!-- First column AKA picture & price -->
         <div class="col s8 m4">
           <div class="icon-block">
+            <!-- Icon -->
             <h2 class="center light-blue-text"><i class="green-text medium material-icons">attach_money</i></h2>
-            <!-- Product image goes here -->
-            <div id="prodPrice" class="productInfo"></div>
+            <!-- Product price goes here -->
+            <div id="prodPrice" class="productInfo">PRICE HERE</div>
             <br>
+            <!-- Product image goes here -->
             <div id="prodImage" class="productInfo">IMAGE HERE!!</div>
           </div>
         </div>
@@ -120,24 +88,39 @@ h5 {
         <!-- Second column AKA Product description-->
         <div class="col s12 m4">
           <div class="icon-block">
+            <!-- Icon -->
             <h2 class="center light-blue-text"><i class="green-text medium material-icons">star_border</i></h2>
+            <!-- Product description goes here -->
             <h5 class="center">Description:</h5>
             <br>
             <div id="prodDescription" class="productInfo">PRODUCT DESCRIPTION GOES HERE</div>
-            <div id="prodRating" class="productInfo">RATINGS GO HERE</div>
             </div>
         </div>
         
+        <!-- Ratings and product link -->
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="green-text medium material-icons">play_circle_outline</i></h2>
-            <h5 class="center">YouTube Review:</h5>
-            <br>
-            <div id="prodVideo" class="productInfo">
-            </div>
+            <!-- Icon-->
+            <h2 class="center light-blue-text"><i class="green-text medium material-icons">comment</i></h2>
+            <!-- Product rating goes here -->
+            <div id="prodRating" class="productInfo">RATINGS GO HERE</div>
+            <!-- Product link -->
             <div id="prodBuy" class="productInfo"></div>
+            </div>
           </div>
         </div>
+
+        <br>
+        <!-- YouTube video section -->
+        <div class="col s12 m4 center-align">
+        <!-- Icon-->
+        <h2 class="center light-blue-text"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
+        <!-- Product youtube video -->
+        <h5 class="center">YouTube Review:</h5>
+        <br>
+        <div id="prodVideo" class="productInfo">
+      </div>
+    </div>
       </div>
 
     </div>
