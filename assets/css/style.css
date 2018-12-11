@@ -48,8 +48,10 @@ body{
       height: auto;
      }
 
-     #prodRating {
-       height: 60px;
-       width:auto;
+     .The-stars {
+       height: auto;
+       width:100px;
      }
 
+     
+     
