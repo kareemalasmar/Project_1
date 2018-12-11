@@ -1,15 +1,14 @@
 
 $(document).ready(function(){
 
-    var shoppingList = [];
-    
-    
+    var shoppingList = JSON.parse(localStorage.getItem("giftList"));
+
     function dumpButtons(){
         $("#buttons-view").empty();
         for(var i = 0; i < shoppingList.length; i++){
             var span = $("<span>");
             var giftButton = $("<button>");
-            var removeButton = $("<button>").addClass("removeButton").text("✓");
+            var removeButton = $("<button>").addClass("removeButton").attr("data-name",shoppingList[i]).text("✓");
             giftButton.addClass("product-button").attr("data-name",shoppingList[i]).text(shoppingList[i]);
             span.append(removeButton, giftButton);
             $("#buttons-view").append(span);
@@ -17,6 +16,13 @@ $(document).ready(function(){
     }
 
     $(document.body).on("click", ".removeButton", function(){
+        for (var i = 0; i < shoppingList.length; i++){
+            if (shoppingList[i] === $(this).attr("data-name")){
+                shoppingList.splice(i, 1);
+            };
+        };
+        localStorage.setItem("giftList", JSON.stringify(shoppingList));
+        
         $(this).parent().remove();
     });
     
@@ -25,9 +31,11 @@ $(document).ready(function(){
         var newProduct = $("#gift-input").val().trim();
         shoppingList.push(newProduct);
         dumpButtons();
-        $("#gift-input").val("");
-        
 
+        localStorage.setItem("giftList", JSON.stringify(shoppingList));
+        console.log(shoppingList);
+
+        $("#gift-input").val("");
     });
     
     function displayProductData (){
@@ -81,4 +89,9 @@ $(document).ready(function(){
     }
     
     $(document).on("click", ".product-button", displayProductData);
+
+    if (!Array.isArray(shoppingList)){
+        shoppingList = [];
+    }
+    dumpButtons();
 })
