@@ -8,8 +8,17 @@ body{
        border-radius: 25px;
      }
      .white-text {
-       background-color: green;
+       
      }
+
+     input[type=submit] {
+      padding:5px 15px; 
+      background-color: green;
+      border:0 none;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; 
+  }
      
      p {
        font-size: 20px;
