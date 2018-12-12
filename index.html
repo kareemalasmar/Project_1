@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <style>
+  a {
+    color: white;
+  }
 </style>
 </head>
 <body>
@@ -42,11 +45,11 @@
           <!-- GIF -->
           <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
            <!-- Welcome start -->
-        <h4 id="bio" class="header col s12 bold">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
+        <h4 id="bio" class="header col s12 ">An Easy Guide To Make To Make Anyones Wishes Come True</h4>
          <!-- Welcome end -->
-        <div class="col s3 bold"></div>
-        <label id="bio2"class="black-text center-align light col s6 bold" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. Once you share the list people can click the corresponding button for the item they wish to get more information on.</p></label>
-        <div class="col s3 bold"></div>
+        <div class="col s3 "></div>
+        <label id="bio2"class="black-text center-align light col s6" for="gift-input"><p>Add your deisred Christmas gifts to create a button at the top of the screen. <br>Click on the corresponding button to view more product information. To remove and item from the list click ✓</p></label>
+        <div class="col s3 "></div>
         <br>
     </div>
 
@@ -71,16 +74,16 @@
 
   <!-- Container 2 start -->
   <div class="container">
-    <div class="section">
+    <div class="section product-section">
       
       <!-- Product name div -->
-      <br>
+     
       <div class="col s12 m4">
 
         <!-- Buttons start -->
           <div  class="center-align"id="buttons-view"></div>
           <!-- clear button -->
-          <div id="clearButton"></div>
+          <div class="clearing"id="clearButton"></div>
           <!-- Product name -->
           <div class="center center-align productInfo" id="prodName"></div>
         </div>
@@ -93,14 +96,14 @@
             <!-- Icon -->
             <h2 class="center light-blue-text"><i class="green-text medium material-icons">attach_money</i></h2>
             <!-- Product price goes here -->
-            <div id="prodPrice" class="productInfo">PRICE</div>
+            <div id="prodPrice" class="productInfo"></div>
             <br>
             <!-- Product image goes here -->
             <div id="prodImage" class="productInfo"></div>
 
                 <div class="icon-block">
                   <!-- Product rating goes here -->
-                  <div id="prodRating" class="productInfo">RATING</div>
+                  <div id="prodRating" class="productInfo"></div>
                   <!-- Product link -->
                   <button id="prodBuy" class="productInfo">Buy me!!</button>
                 </div>
