@@ -146,6 +146,17 @@ body{
        margin: auto;
      }
 
+    .hthree {
+      margin-top: 10px;
+       margin-bottom: 3px;
+      
+    }
+
+     #bio {
+       margin-top: 10px;
+       margin-bottom: 5px;
+     }
+
      /* Put cute fonts we got from google fonts */
      #santa, #bio, #bio2, #loading {
       font-family: 'Mountains of Christmas', cursive;
@@ -161,7 +172,7 @@ body{
      }
 
      #middle {
-       margin-bottom: 42px;
+       margin-bottom: 10px;
     }
      
      /* Put cute fonts we got from google fonts */
