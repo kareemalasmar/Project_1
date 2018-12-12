@@ -97,7 +97,7 @@ $(document).ready(function() {
         .text("Go to product!");
       $("#prodBuy").append(link);
       // Pulls product description and displays on html
-      var productDescription = response.items[0].shortDescription;
+      var productDescription = response.items[0].shortDescription.replace(/&mdash;/g, "-").replace(/&rsquo;/g, "'").replace(/&amp;/g, "&").replace(/&ndash;/g, "-");  
       var description = $("<p>").text(productDescription);
       $("#prodDescription").append(description);
       // Pulls product rating and displays on html
