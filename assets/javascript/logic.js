@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
     $("#productContainer").hide();
+    $("#loadingContainer").hide();
 
     var shoppingList = JSON.parse(localStorage.getItem("giftList"));
 
@@ -39,9 +40,15 @@ $(document).ready(function(){
         }
 
     });
+
+    function loadingGif (){
+        $("#productContainer").show();
+        $("#loadingContainer").hide();
+    }
     
     function displayProductData (){
         $(".productInfo").empty();
+        $("#productContainer").hide();    
     
         var productSearch = $(this).attr("data-name");
         
@@ -98,7 +105,8 @@ $(document).ready(function(){
                 }
             });
         });
-        $("#productContainer").show();
+        $("#loadingContainer").show();
+        setTimeout(loadingGif, 5000);
     }
     
     var clearButton = $("<button>");
