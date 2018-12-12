@@ -2,6 +2,7 @@ $(document).ready(function() {
   // Hides product info and loading containers on start up
   $("#productContainer").hide();
   $("#loadingContainer").hide();
+  $("#productNotFoundContainer").hide();
 
   // Array of gifts will pull data from local storage
   var shoppingList = JSON.parse(localStorage.getItem("giftList"));
@@ -67,6 +68,7 @@ $(document).ready(function() {
   function displayProductData() {
     $(".productInfo").empty();
     $("#productContainer").hide();
+    $("#productNotFoundContainer").hide();
 
     // Variable = to the value of data-name attr from button clicked which is equal to value of text input
     var productSearch = $(this).attr("data-name");
@@ -78,6 +80,33 @@ $(document).ready(function() {
         productSearch,
       method: "GET"
     }).then(function(response) {
+        if (response.items === undefined){
+            $("#productNotFoundContainer").show();
+            $("#productContainer").hide();
+            $("#loadingContainer").hide();
+            clearTimeout(loadingTimeout);
+            // var name = $("<h4>").text("Product not available");
+            // $("#prodName").append(name);
+            // var price = $("<h5>").text("Price not available");
+            // $("#prodPrice").append(price);
+            // var image = $("<h5>").text("Image not Available");
+            // $("#prodImage").append(image);
+            // var link = $("<p>")
+            // .text("Link not available");
+            // $("#prodBuy").append(link);
+            // var description = $("<p>").text("Description not available");
+            // $("#prodDescription").append(description);
+            // var rating = $("<div>").text("Product rating not available");
+            // $("#prodRating").append(rating);
+            // var video = $("<p>").text("Video review not available");
+            // $("#prodVideo").append(video);
+        }
+        else {
+                // Shows loading gif 
+    $("#loadingContainer").show();
+    
+    // SetTimeout function will wait 5 seconds before hiding loading gif again and showing product info
+    loadingTimeout();
       // Pulls product name and displays on html
       var productName = response.items[0].name;
       var name = $("<h4>").text(productName);
@@ -100,6 +129,7 @@ $(document).ready(function() {
       var productDescription = response.items[0].shortDescription;
       var description = $("<p>").text(productDescription);
       $("#prodDescription").append(description);
+    }
       // Pulls product rating and displays on html
       var productRating = response.items[0].customerRating;
       // Conditional to check if product has rating before displaying
@@ -147,10 +177,14 @@ $(document).ready(function() {
       });
     });
 
-    // Shows loading gif 
-    $("#loadingContainer").show();
+    // // Shows loading gif 
+    // $("#loadingContainer").show();
     
-    // SetTimeout will wait 5 seconds before hiding loading gif again and showing product info
+    // // SetTimeout function will wait 5 seconds before hiding loading gif again and showing product info
+    // loadingTimeout();
+  }
+
+  function loadingTimeout (){
     setTimeout(loadingGif, 5000);
   }
 
@@ -170,6 +204,7 @@ $(document).ready(function() {
     $("#prodRating").empty();
     $("#prodVideo").empty();
     $("#productContainer").hide();
+    $("#productNotFoundContainer").hide();
   });
   
   // When any button with class "product-button" is clicked it will run our Display function
