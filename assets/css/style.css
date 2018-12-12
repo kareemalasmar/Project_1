@@ -25,9 +25,7 @@ body{
        margin: 5px auto 5px auto;
   }
 
-  #prodBuy {
-    margin: auto;
-  }
+  
   .buyblock {
     margin-top: 5px;
   }
@@ -55,9 +53,23 @@ body{
        border-radius: 15px;
        max-width: 100%;
        margin: 7px auto 3px auto;
-       width: 45%;
+       width: 28%;
        padding: 5px;
+       align-content: center;
 
+    }
+
+    .Ratediv {
+      text-align: center;
+    }
+
+    #Namebackground {
+      background: rgba(255,255,255,0.9);
+       border-radius: 15px;
+       max-width: 100%;
+       margin: 7px auto 3px auto;
+       width: 80%;
+       padding: 5px;
     }
 
      p {
@@ -117,7 +129,7 @@ body{
      .stars {
        height: auto;
        width:100px;
-       align-content: center;
+       margin: auto;
      }
      #santa {
       font-family: 'Mountains of Christmas', cursive;
@@ -150,6 +162,10 @@ body{
 
      #bio, #bio2 {
        font-weight: normal;
+     }
+
+     a {
+       float: right;
      }
     
 
