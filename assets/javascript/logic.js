@@ -2,11 +2,12 @@ $(document).ready(function() {
   // Hides product info and loading containers on start up
   $("#productContainer").hide();
   $("#loadingContainer").hide();
+  $("#productNotFoundContainer").hide();
 
   // Array of gifts will pull data from local storage
   var shoppingList = JSON.parse(localStorage.getItem("giftList"));
 
-  // creates a function to display gift buttons from shopping list array to html 
+  // creates a function to display gift buttons from shopping list array to html
   function dumpButtons() {
     $("#buttons-view").empty();
     for (var i = 0; i < shoppingList.length; i++) {
@@ -67,39 +68,52 @@ $(document).ready(function() {
   function displayProductData() {
     $(".productInfo").empty();
     $("#productContainer").hide();
+    $("#productNotFoundContainer").hide();
 
     // Variable = to the value of data-name attr from button clicked which is equal to value of text input
     var productSearch = $(this).attr("data-name");
 
-    // Requests data from walmart api with productSearch var in query string 
+    // Requests data from walmart api with productSearch var in query string
     $.ajax({
       url:
         "https://cors-anywhere.herokuapp.com/https://api.walmartlabs.com/v1/search?apiKey=c2dsw2ypw9kedr4kky5vw7dk&numItems=1&query=" +
         productSearch,
       method: "GET"
     }).then(function(response) {
-      // Pulls product name and displays on html
-      var productName = response.items[0].name;
-      var name = $("<h4>").text(productName);
-      $("#prodName").append(name);
-      // Pulls product price and displays on html
-      var productPrice = response.items[0].salePrice;
-      var price = $("<h5>").text("$" + productPrice + " USD");
-      $("#prodPrice").append(price);
-      // Pulls product image and displays on html
-      var productImage = response.items[0].largeImage;
-      var image = $("<img>").attr({ src: productImage, alt: productName });
-      $("#prodImage").append(image);
-      // Pulls product link to walmart page and displays on html
-      var productLink = response.items[0].productUrl;
-      var link = $("<a>")
-        .attr({ href: productLink, target: "_blank" })
-        .text("Go to product!");
-      $("#prodBuy").append(link);
-      // Pulls product description and displays on html
-      var productDescription = response.items[0].shortDescription.replace(/&mdash;/g, "-").replace(/&rsquo;/g, "'").replace(/&amp;/g, "&").replace(/&ndash;/g, "-");  
-      var description = $("<p>").text(productDescription);
-      $("#prodDescription").append(description);
+      if (response.items === undefined) {
+        $("#productNotFoundContainer").show();
+        $("#productContainer").hide();
+        $("#loadingContainer").hide();
+        clearTimeout(loadingTimeout);
+      } else {
+        // Shows loading gif
+        $("#loadingContainer").show();
+
+        // SetTimeout function will wait 5 seconds before hiding loading gif again and showing product info
+        loadingTimeout();
+        // Pulls product name and displays on html
+        var productName = response.items[0].name;
+        var name = $("<h4>").text(productName);
+        $("#prodName").append(name);
+        // Pulls product price and displays on html
+        var productPrice = response.items[0].salePrice;
+        var price = $("<h5>").text("$" + productPrice + " USD");
+        $("#prodPrice").append(price);
+        // Pulls product image and displays on html
+        var productImage = response.items[0].largeImage;
+        var image = $("<img>").attr({ src: productImage, alt: productName });
+        $("#prodImage").append(image);
+        // Pulls product link to walmart page and displays on html
+        var productLink = response.items[0].productUrl;
+        var link = $("<a>")
+          .attr({ href: productLink, target: "_blank" })
+          .text("Go to product!");
+        $("#prodBuy").append(link);
+        // Pulls product description and displays on html
+        var productDescription = response.items[0].shortDescription.replace(/&mdash;/g, "-").replace(/&rsquo;/g, "'").replace(/&amp;/g, "&").replace(/&ndash;/g, "-");
+        var description = $("<p>").text(productDescription);
+        $("#prodDescription").append(description);
+      }
       // Pulls product rating and displays on html
       var productRating = response.items[0].customerRating;
       // Conditional to check if product has rating before displaying
@@ -146,11 +160,9 @@ $(document).ready(function() {
         }
       });
     });
+  }
 
-    // Shows loading gif 
-    $("#loadingContainer").show();
-    
-    // SetTimeout will wait 5 seconds before hiding loading gif again and showing product info
+  function loadingTimeout() {
     setTimeout(loadingGif, 5000);
   }
 
@@ -170,8 +182,9 @@ $(document).ready(function() {
     $("#prodRating").empty();
     $("#prodVideo").empty();
     $("#productContainer").hide();
+    $("#productNotFoundContainer").hide();
   });
-  
+
   // When any button with class "product-button" is clicked it will run our Display function
   $(document).on("click", ".product-button", displayProductData);
 
@@ -180,6 +193,6 @@ $(document).ready(function() {
     shoppingList = [];
   }
 
-  // Generates buttons on start up from already existing array 
+  // Generates buttons on start up from already existing array
   dumpButtons();
 });
