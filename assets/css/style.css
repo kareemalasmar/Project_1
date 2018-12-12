@@ -37,8 +37,8 @@ body{
   which was pretty tricky because we werent able to 
   control the text that well once inside the button */
   #clearButton {
-    width: 15%;
-    text-align: center;
+    width: 9%;
+    text-align: inherit;
     padding: 2px;
   }
   /* youtube icon/playbutton */
