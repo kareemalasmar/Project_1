@@ -126,6 +126,11 @@ body{
       height: auto;
      }
 
+     .icons {
+       margin-top: 5px;
+       margin-bottom: 5px;
+     }
+
      .stars {
        height: auto;
        width:100px;
