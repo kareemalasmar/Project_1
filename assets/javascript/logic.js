@@ -70,11 +70,11 @@ $(document).ready(function(){
             // product rating
             var productRating = response.items[0].customerRating;
             if (productRating === undefined){
-                var rating = $("<p>").text("Product rating not available");
+                var rating = $("<div>").text("Product rating not available");
                 $("#prodRating").append(rating);
             }
             else {
-                var rating = $("<p>").text("  " + productRating + "/5");
+                var rating = $("<div>").addClass("Ratediv").text("  " + productRating + "/5");
                 $("#prodRating").append(rating);
                 // product stars
                 var productStars = response.items[0].customerRatingImage;
@@ -104,7 +104,7 @@ $(document).ready(function(){
         $("#prodImage").empty();
         $("#prodBuy").empty();
         $("#prodDescription").empty();
-         $("#pprodRatingStars").empty();
+         $("#prodRatingStars").empty();
         $("#prodRating").empty();
         $("#prodVideo").empty();
         $("#productContainer").hide();
