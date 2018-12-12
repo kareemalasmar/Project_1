@@ -136,16 +136,17 @@ body{
        width:100px;
        margin: auto;
      }
-     #santa {
+     #santa, #bio, #bio2, #loading {
       font-family: 'Mountains of Christmas', cursive;
      }
-     #bio {
-      font-family: 'Mountains of Christmas', cursive;
-     }
+
      #bio2 {
-      font-family: 'Mountains of Christmas', cursive;
       line-height: 1.9px;
       letter-spacing: 1.5px;
+     }
+
+     #loading {
+       text-align: center;
      }
 
      #middle {
