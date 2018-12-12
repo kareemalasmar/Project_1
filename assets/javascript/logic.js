@@ -69,12 +69,12 @@ $(document).ready(function(){
             $("#prodDescription").append(description);
             // product rating
             var productRating = response.items[0].customerRating;
-            var rating = $("<p>").text(productRating + "/5");
+            var rating = $("<span>").text("  " + productRating + "/5");
             $("#prodRating").append(rating);
             // product stars
             var productStars = response.items[0].customerRatingImage;
-            var stars = $("<img>").addClass("stars").attr({src: productStars, alt: productRating + "/5 stars"});
-            $("#prodRating").append(stars);
+            var stars = $("<img>").addClass("stars").attr({src: productStars, alt: "  " +  productRating + "/5 stars"});
+            $("#prodRatingStars").append(stars);
             $.ajax({
                 url: " https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&maxResults=1&key=AIzaSyBxpyfAxI6oQ0SmlVVG1RLx8ArXQGYpLyY&q=" + productName + " review",          
                 method: "GET"
@@ -94,10 +94,11 @@ $(document).ready(function(){
 
     $("#clearButton").on("click", function(){
         $("#prodName").empty();
-        $("#prodPrice").empty();
+        $("#prodPrice").empty();       
         $("#prodImage").empty();
         $("#prodBuy").empty();
         $("#prodDescription").empty();
+         $("#pprodRatingStars").empty();
         $("#prodRating").empty();
         $("#prodVideo").empty();
         $("#productContainer").hide();

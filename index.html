@@ -79,6 +79,19 @@
       
       <!-- Searchbar end -->
     </div>
+        <!-- Product name div -->
+     
+        <div class="col s12 m4">
+
+          <!-- Buttons start -->
+            <div  class="center-align"id="buttons-view"></div>
+            <!-- clear button -->
+            <div class="clearing"id="clearButton"></div>
+            <!-- Product name -->
+            <div class="center center-align productInfo" id="prodName"></div>
+          </div>
+        <!-- End product name div -->
+  
   </div>
   <!-- Container 1 end  -->
   
@@ -90,10 +103,7 @@
     <div class="section product-section">
         <div class="center center-align productInfo" id="prodName"></div>
       
-      <!-- Product name div -->
-     
-      
-
+  
 <!-- Row for columns starts -->
       <div class="row">
         <div class="col s6 m6">
@@ -105,14 +115,14 @@
             <br>
             <!-- Product image goes here -->
             <div id="prodImage" class="productInfo"></div>
-
-                <div class="icon-block">
-                  <!-- Product rating goes here -->
-                  <div id="prodRating" class="productInfo"></div>
-                  <!-- Product link -->
-                  <button id="prodBuy" class="productInfo">Buy me!!</button>
+              <div class="row" id="buyButton">
+                <div class="icon-block buyblock">
+                  
+                  <!-- Product link & Product Rating -->
+                  <button id="prodBuy" class="productInfo">Buy me!!</button><span id="prodRating" class="productInfo"></span> <span class="productInfo" id="prodRatingStars"></span>
                 </div>
           </div>
+        </div>
         </div>
         
         
@@ -133,10 +143,12 @@
         <!-- YouTube video section -->
         <div class="col s12 m4 center-align">
         <!-- Icon-->
-        <h2 class="center light-blue-text"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
+        <h2 class="center light-blue-text" id="tubeicon"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
         <!-- Product youtube video -->
+        <div class="row" id="tubeWhite">
         <h5 id="youtube" class="center">YouTube Review:</h5>
         <div id="prodVideo" class="productInfo">
+          </div>
       </div>
     </div>
       </div>
