@@ -69,12 +69,18 @@ $(document).ready(function(){
             $("#prodDescription").append(description);
             // product rating
             var productRating = response.items[0].customerRating;
-            var rating = $("<span>").text("  " + productRating + "/5");
-            $("#prodRating").append(rating);
-            // product stars
-            var productStars = response.items[0].customerRatingImage;
-            var stars = $("<img>").addClass("stars").attr({src: productStars, alt: "  " +  productRating + "/5 stars"});
-            $("#prodRatingStars").append(stars);
+            if (productRating === undefined){
+                var rating = $("<p>").text("Product rating not available");
+                $("#prodRating").append(rating);
+            }
+            else {
+                var rating = $("<p>").text("  " + productRating + "/5");
+                $("#prodRating").append(rating);
+                // product stars
+                var productStars = response.items[0].customerRatingImage;
+                var stars = $("<img>").addClass("stars").attr({src: productStars, alt: "  " +  productRating + "/5 stars"});
+                $("#prodRatingStars").append(stars);
+            }
             $.ajax({
                 url: " https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&maxResults=1&key=AIzaSyBxpyfAxI6oQ0SmlVVG1RLx8ArXQGYpLyY&q=" + productName + " review",          
                 method: "GET"
