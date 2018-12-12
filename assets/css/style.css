@@ -27,6 +27,7 @@ body{
     align-content: center;
     text-align: center;
     margin: 5px auto 5px auto;
+    text-transform: uppercase;
   }
 
   /* block that holds stars, rating and product link */
@@ -37,7 +38,7 @@ body{
   which was pretty tricky because we werent able to 
   control the text that well once inside the button */
   #clearButton {
-    width: 9%;
+    width: 8%;
     text-align: inherit;
     padding: 2px;
   }
