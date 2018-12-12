@@ -30,13 +30,10 @@ $(document).ready(function(){
     $("#add-gift").on("click", function(event){
         event.preventDefault();
         var newProduct = $("#gift-input").val().trim();
-        console.log("new product" + newProduct);
         shoppingList.push(newProduct);
         dumpButtons();
 
         localStorage.setItem("giftList", JSON.stringify(shoppingList));
-        console.log(shoppingList);
-
         $("#gift-input").val("");
 
     });
@@ -45,13 +42,11 @@ $(document).ready(function(){
         $(".productInfo").empty();
     
         var productSearch = $(this).attr("data-name");
-        console.log("walmart" + productSearch);
         
         $.ajax({
-            url: "http://cors-anywhere.herokuapp.com/https://api.walmartlabs.com/v1/search?apiKey=c2dsw2ypw9kedr4kky5vw7dk&numItems=1&query=" + productSearch,
+            url: "https://cors-anywhere.herokuapp.com/https://api.walmartlabs.com/v1/search?apiKey=c2dsw2ypw9kedr4kky5vw7dk&numItems=1&query=" + productSearch,
             method: "GET"
         }).then(function(response){
-            console.log(response.items[0]);
             // product name 
             var productName = response.items[0].name;
             var name = $("<h4>").text(productName);
@@ -84,7 +79,6 @@ $(document).ready(function(){
                 url: " https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&maxResults=1&key=AIzaSyBxpyfAxI6oQ0SmlVVG1RLx8ArXQGYpLyY&q=" + productName + " review",          
                 method: "GET"
             }).then(function(response) {
-                console.log(response);
                 var videoId = response.items[0].id.videoId;
                 var video = $("<iframe>").attr({width: "560", height: "315", src: "https://www.youtube.com/embed/" + videoId, frameborder: "0", allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "allowfullscreen"});
                 $("#prodVideo").append(video);
