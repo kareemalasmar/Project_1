@@ -3,169 +3,205 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>SantaShopper</title>
-  <!-- CSS  -->
+  <title>Santa's Shopper</title>
+
+<!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<style>
-  a {
-    color: white;
-  }
-</style>
-</head>
-<body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    a {
+    color: white;
+    }
+  </style>
+</head>
+
+<!-- Body Start -->
+<body>
   <br>
   <br>
 
+<!-- Navbar -->
+  <ul id="nav-mobile" class="sidenav">
+    <li><a href="#">Navbar Link</a></li>
+  </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"></a>
+<!-- End navbar -->
 
-      <!-- Navbar -->
-    <ul id="nav-mobile" class="sidenav">
-      <li><a href="#">Navbar Link</a></li>
-    </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"></a>
-    </nav>
-    <!-- End navbar -->
-
-  <!-- Largest container start-->
+<!-- Largest container start-->
   <div class="section no-pad-bot" id="index-banner">
-  
-  <!-- Container 1 start  -->
-    <div class="container">
+
+<!-- Container 1 start  -->
+  <div class="container">
+    <br>
+    
+<!-- Inner Container Start -->
+    <div class="container" >
+
+<!-- Santa's Shopper start -->
       <br>
-      <div class="container" >
-  <!-- Santa's Shopper start -->
-        <br>
       <h1 id="santa" class="header center black-text">Santa's Shopper</h1>
-  <!-- Santa's Shopper End -->
+<!-- Santa's Shopper End -->
 
-  <!-- Intro section start -->
-      <div class="row center" >
-          <!-- GIF -->
-          <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
-           <!-- Welcome start -->
+<!-- Intro section start -->
+      <div class="row center">
+
+<!-- GIF -->
+        <img class="gif" src="assets/images/raindeer.gif" alt="Funny image">
+
+<!-- Welcome start -->
         <h2 id="bio" class="header col s12 ">An Easy Online Holiday Wish List</h2>
-         <!-- Welcome end -->
         <div class="col s3 "></div>
-        <label id="bio2"class="black-text center-align light col s6" for="gift-input"><h3>List maker:</h3><h6>Add your deisred Christmas gifts to create a button below & share! No Peaking afterwards!</h6><h3>Wish granter:</h3><h6>Click any of the the buttons below you wish to know more about OR are looking to purchase. Once purchased click ✓ to remove the item from the list.</h6></label>
+          <label id="bio2"class="black-text center-align light col s6" for="gift-input">
+            <h3>List maker:</h3><h6>Add your deisred Christmas gifts to create a button below & share! No Peaking afterwards!</h6>
+            <h3>Wish granter:</h3><h6>Click any of the the buttons below you wish to know more about OR are looking to purchase. Once purchased click ✓ to remove the item from the list.</h6></label>
         <div class="col s3 "></div>
-        <br>
-    </div>
+<!-- Welcome End -->
 
-    <!-- Searchbar start -->
-    <div class="row center" id="middle">
+        <br>
+      </div>
+<!-- Intro Section End -->
+
+<!-- Searchbar start -->
+      <div class="row center" id="middle">
         <div class="header col s3 bold"></div>
-        <div class="col s6 bold center" id="searchForm">
+          <div class="col s6 bold center" id="searchForm">
             <form id="gift-form">
-                <input class="input-field  center-align" type="text" id="gift-input">
-                <input class="white-text" id="add-gift" type="submit" value="Add more gifts">
+              <input class="input-field  center-align" type="text" id="gift-input">
+              <input class="white-text" id="add-gift" type="submit" value="Add more gifts">
             </form>
             <br>
           </div>
-          <div class="header col s3 bold"></div>
-    </div>
+        <div class="header col s3 bold"></div>
+        </div>
+<!-- Searchbar End -->
 
+
+<!-- Buttons start -->
+      <div class="col s12 m4">
+        <div  class="center-align"id="buttons-view"></div>
+
+<!-- Clear Button -->
+        <div class="clearing"id="clearButton"></div>
+      </div>
+<!-- Buttons End -->
+
+    </div>
+<!-- Inner Container end -->
+
+<!-- Product name div -->
     <div class="col s12 m4">
 
-      <!-- Buttons start -->
-        <div  class="center-align"id="buttons-view"></div>
-        <!-- clear button -->
-        <div class="clearing"id="clearButton"></div>
-        <!-- Product name -->
-      </div>
-      <!-- End product name div -->
-      
-      <!-- Searchbar end -->
+<!-- Buttons start -->
+      <div  class="center-align"id="buttons-view"></div>
     </div>
-        <!-- Product name div -->
-     
-        <div class="col s12 m4">
+<!-- End product name div -->
 
-          <!-- Buttons start -->
-            <div  class="center-align"id="buttons-view"></div>
-            <!-- Product name -->
-          </div>
-        <!-- End product name div -->
-  
   </div>
-  <!-- Container 1 end  -->
+<!-- Container 1 end  -->
   
+<!-- Loading Gif Container Start -->
   <br>      
-  <br>  
-  <!-- loading gif container -->
+  <br>
   <div class="container" id="loadingContainer">
     <img src="assets/images/loading.gif" alt="Loading">
     <h3 id="loading">LOADING...</h3>
   </div>
-  <!-- Container 2 start -->
+<!-- Loading Gif Container End -->
+
+<!-- Container 2 start -->
   <div class="container" id="productContainer">
+
+<!-- Product Section Start -->
     <div class="section product-section">
       <div class="row" id="Namebackground">
         <div class="center center-align productInfo" id="prodName"></div>
-        </div>
-      
-  
+      </div>
+
 <!-- Row for columns starts -->
-      <div class="row">
-        <div class="col s6 m6">
-          <div class="icon-block">
-            <!-- Icon -->
-            <h2 class="center light-blue-text icons"><i class="green-text medium material-icons">attach_money</i></h2>
-            <!-- Product price goes here -->
-            <h5><div id="prodPrice" class="productInfo"></div></h5>
-            <br>
-            <!-- Product image goes here -->
-            <div id="prodImage" class="productInfo"></div>
-              <div class="row" id="buyButton">
-                <div class="icon-block buyblock">
-                  
-                  <!-- Product link & Product Rating -->
-                  <div class="productInfo" id="prodRatingStars"></div><div id="prodRating" class="productInfo"><br></div><button id="prodBuy" class="productInfo">Buy me!!</button>
-                </div>
-          </div>
-        </div>
-        </div>
-        
-        
-        <!-- Second column AKA Product description-->
-        <div class="col s6 m6 colright">
-          <div class="icon-block">
-            <!-- Icon -->
-            <h2 class="center light-blue-text icons"><i class="green-text medium material-icons">comment</i></h2>
-            <!-- Product description goes here -->
-            <h5 id="description" class="center">Description:</h5>
-            <br>
-            <div id="prodDescription" class="productInfo"></div>
-            </div>
-        </div>
-        </div>
-        <!-- Row for columns end -->
+  <div class="row">
+    <div class="col s6 m6">
+      <div class="icon-block">
+<!-- Icon -->
+        <h2 class="center light-blue-text icons"><i class="green-text medium material-icons">attach_money</i></h2>
+<!-- Product price goes here -->
+        <h5><div id="prodPrice" class="productInfo"></div></h5>
+        <br>
+<!-- Product image goes here -->
+    <div id="prodImage" class="productInfo"></div>
+      <div class="row" id="buyButton">
+       <div class="icon-block buyblock">
 
-        <!-- YouTube video section -->
-        <div class="col s12 m4 center-align">
-        <!-- Icon-->
-        <h2 class="center light-blue-text icons" id="tubeicon"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
-        <!-- Product youtube video -->
-        <div class="row" id="tubeWhite">
-        <h5 id="youtube" class="center">YouTube Review:</h5>
-        <div id="prodVideo" class="productInfo">
-          </div>
-      </div>
-    </div>
-      </div>
-    </div>
-    <!-- Container 2 end  -->
-
-    <br>
-    <br>
+<!-- Product link & Product Rating -->
+  <div class="productInfo" id="prodRatingStars"></div><div id="prodRating" class="productInfo"><br></div><button id="prodBuy" class="productInfo">Buy me!!</button>
+<!-- Buyblock End -->  
   </div>
-  <!-- Largest container end-->
+
+<!-- Buybutton End -->
+  </div>
   
-  <!--  Scripts-->
+<!-- Icon Block End -->
+  </div>
+
+<!-- Col End -->
+  </div>
+
+
+<!-- Second column AKA Product description-->
+  <div class="col s6 m6 colright">
+    <div class="icon-block">
+
+<!-- Icon -->
+      <h2 class="center light-blue-text icons"><i class="green-text medium material-icons">comment</i></h2>
+<!-- Product description goes here -->
+      <h5 id="description" class="center">Description:</h5>
+      <br>
+      <div id="prodDescription" class="productInfo"></div>
+<!-- Icon Block End -->
+  </div>
+
+<!-- Col End -->
+  </div>
+
+<!-- Row for columns end -->
+  </div>
+
+<!-- YouTube Section Start -->
+  <div class="col s12 m4 center-align">
+
+<!-- Icon-->
+    <h2 class="center light-blue-text icons" id="tubeicon"><i class="green-text medium material-icons center-align"> play_circle_outline</i></h2>
+
+<!-- Youtube Video Start-->
+      <div class="row" id="tubeWhite">
+        <h5 id="youtube" class="center">YouTube Review:</h5>
+          <div id="prodVideo" class="productInfo">
+          </div>
+      </div>
+<!-- Youtube Video End-->
+
+<!-- Youtube Section End -->
+  </div>
+
+<!-- Product Section End -->
+  </div>
+
+<!-- Container 2 end  -->
+  </div>
+
+  <br>
+  <br>
+
+<!-- Largest container end-->
+  </div>
+
+
+<!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="assets/javascript/logic.js"></script>
-  
+
 </body>
-x</html
+</html>

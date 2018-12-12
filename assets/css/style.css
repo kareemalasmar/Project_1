@@ -31,8 +31,8 @@ body{
     margin-top: 5px;
   }
   #clearButton {
-    width: 15%;
-    text-align: center;
+    width: 9%;
+    text-align: inherit;
     padding: 2px;
   }
   #tubeicon {
