@@ -110,7 +110,7 @@ $(document).ready(function(){
     }
     
     var clearButton = $("<button>");
-    clearButton.attr("id", "clearButton").text("Clear");
+    clearButton.addClass("center-align").attr("id", "clearButton").text("Clear");
     $("#clearButton").append(clearButton);
     
 
