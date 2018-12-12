@@ -31,14 +31,16 @@ $(document).ready(function(){
     $("#add-gift").on("click", function(event){
         event.preventDefault();
         var newProduct = $("#gift-input").val().trim();
-        if (newProduct !== ""){
+        if (newProduct !== "" && shoppingList.indexOf(newProduct)=== -1){
             shoppingList.push(newProduct);
             dumpButtons();
 
             localStorage.setItem("giftList", JSON.stringify(shoppingList));
             $("#gift-input").val("");
         }
-
+        else {
+            $("#gift-input").val("");
+        }
     });
 
     function loadingGif (){
