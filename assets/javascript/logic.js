@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+    $("#productContainer").hide();
 
     var shoppingList = JSON.parse(localStorage.getItem("giftList"));
 
@@ -29,6 +30,7 @@ $(document).ready(function(){
     $("#add-gift").on("click", function(event){
         event.preventDefault();
         var newProduct = $("#gift-input").val().trim();
+        console.log("new product" + newProduct);
         shoppingList.push(newProduct);
         dumpButtons();
 
@@ -36,12 +38,14 @@ $(document).ready(function(){
         console.log(shoppingList);
 
         $("#gift-input").val("");
+
     });
     
     function displayProductData (){
         $(".productInfo").empty();
     
         var productSearch = $(this).attr("data-name");
+        console.log("walmart" + productSearch);
         
         $.ajax({
             url: "http://cors-anywhere.herokuapp.com/https://api.walmartlabs.com/v1/search?apiKey=c2dsw2ypw9kedr4kky5vw7dk&numItems=1&query=" + productSearch,
@@ -86,6 +90,7 @@ $(document).ready(function(){
                 $("#prodVideo").append(video);
             });
         });
+        $("#productContainer").show();
     }
     
     var clearButton = $("<button>");
@@ -101,9 +106,11 @@ $(document).ready(function(){
         $("#prodDescription").empty();
         $("#prodRating").empty();
         $("#prodVideo").empty();
+        $("#productContainer").hide();
     });
 
     $(document).on("click", ".product-button", displayProductData);
+
 
     
     if (!Array.isArray(shoppingList)){
