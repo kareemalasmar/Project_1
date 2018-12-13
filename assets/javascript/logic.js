@@ -16,7 +16,7 @@ $(document).ready(function() {
       var removeButton = $("<button>")
         .addClass("removeButton")
         .attr("data-name", shoppingList[i])
-        .text("✓");
+        .text("X");
       giftButton
         .addClass("product-button")
         .attr("data-name", shoppingList[i])
