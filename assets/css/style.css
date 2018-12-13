@@ -16,7 +16,7 @@ body{
 
      
 /* styling all the buttons to be green and have borders */
-  input[type=submit], .product-button, .removeButton, #prodBuy, #clearButton, .clearing {
+  input[type=submit], .product-button, .removeButton, #prodBuy, #clearButton {
     padding:5px 15px; 
     background-color: green;
     border:0 none;
@@ -38,10 +38,14 @@ body{
   which was pretty tricky because we werent able to 
   control the text that well once inside the button */
   #clearButton {
-    width: 8%;
-    text-align: inherit;
+    width: 15%;
     padding: 2px;
   }
+
+  #clearButtonHere {
+    text-align: center;
+  }
+
   /* youtube icon/playbutton */
   #tubeicon {
     margin-top: 0;

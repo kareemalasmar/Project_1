@@ -168,11 +168,11 @@ $(document).ready(function() {
 
   // Creates Clear button and appends it to page
   var clearButton = $("<button>");
-  clearButton.attr("id", "clearButton").text("Clear");
-  $("#clearButton").append(clearButton);
+  clearButton.attr("id", "clearButton").html("Clear");
+  $("#clearButtonHere").append(clearButton);
 
   // When Clear button is clicked it will empty all product info divs and hide entire section
-  $("#clearButton").on("click", function() {
+  $("#clearButtonHere").on("click", function() {
     $("#prodName").empty();
     $("#prodPrice").empty();
     $("#prodImage").empty();
