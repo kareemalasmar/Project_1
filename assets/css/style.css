@@ -168,7 +168,7 @@ body{
      }
 
      /* Put cute fonts we got from google fonts */
-     #santa, #bio, #bio2, #loading, .pricetext {
+     #santa, #bio, #bio2, #loading, .pricetext, #prodPrice {
       font-family: 'Mountains of Christmas', cursive;
      }
      /* pus proper spacing in-between lines in page description tags  */
