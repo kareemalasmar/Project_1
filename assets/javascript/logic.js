@@ -16,7 +16,7 @@ $(document).ready(function() {
       var removeButton = $("<button>")
         .addClass("removeButton")
         .attr("data-name", shoppingList[i])
-        .text("X");
+        .text("✓");
       giftButton
         .addClass("product-button")
         .attr("data-name", shoppingList[i])
@@ -98,7 +98,7 @@ $(document).ready(function() {
         // Pulls product price and displays on html
         var productPrice = response.items[0].salePrice;
         var price = $("<h5>").text("$" + productPrice + " USD");
-        $("#prodPrice").addClass("pricetext").append(price);
+        $("#prodPrice").append(price);
         // Pulls product image and displays on html
         var productImage = response.items[0].largeImage;
         var image = $("<img>").attr({ src: productImage, alt: productName });
@@ -106,7 +106,7 @@ $(document).ready(function() {
         // Pulls product link to walmart page and displays on html
         var productLink = response.items[0].productUrl;
         var link = $("<a>")
-          .attr({ href: productLink, target: "_blank" }).addClass("productlinkclick")
+          .attr({ href: productLink, target: "_blank" })
           .text("Go to product!");
         $("#prodBuy").append(link);
         // Pulls product description and displays on html
@@ -168,11 +168,11 @@ $(document).ready(function() {
 
   // Creates Clear button and appends it to page
   var clearButton = $("<button>");
-  clearButton.attr("id", "clearButton").html("Clear");
+  clearButton.attr("id", "clearButton").text("Clear");
   $("#clearButtonHere").append(clearButton);
 
   // When Clear button is clicked it will empty all product info divs and hide entire section
-  $("#clearButtonHere").on("click", function() {
+  $("#clearButton").on("click", function() {
     $("#prodName").empty();
     $("#prodPrice").empty();
     $("#prodImage").empty();
