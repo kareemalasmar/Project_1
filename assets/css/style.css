@@ -30,10 +30,6 @@ body{
     text-transform: uppercase;
   }
 
-  #prodBuy {
-
-  }
-
   .removeButton {
     opacity: .5;
   }
@@ -74,7 +70,7 @@ body{
       border-radius: 15px;
       max-width: 100%;
       margin: 7px auto 3px auto;
-      width: 39%;
+      width: 28%;
       padding: 5px;
       align-content: center;
 
@@ -167,11 +163,10 @@ body{
      #bio {
        margin-top: 10px;
        margin-bottom: 5px;
-       text-align: center;
      }
 
      /* Put cute fonts we got from google fonts */
-     #santa, #bio, #bio2, #loading {
+     #santa, #bio, #bio2, #loading, .pricetext {
       font-family: 'Mountains of Christmas', cursive;
      }
      /* pus proper spacing in-between lines in page description tags  */

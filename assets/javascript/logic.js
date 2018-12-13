@@ -98,7 +98,7 @@ $(document).ready(function() {
         // Pulls product price and displays on html
         var productPrice = response.items[0].salePrice;
         var price = $("<h5>").text("$" + productPrice + " USD");
-        $("#prodPrice").append(price);
+        $("#prodPrice").addClass("pricetext").append(price);
         // Pulls product image and displays on html
         var productImage = response.items[0].largeImage;
         var image = $("<img>").attr({ src: productImage, alt: productName });
@@ -106,7 +106,7 @@ $(document).ready(function() {
         // Pulls product link to walmart page and displays on html
         var productLink = response.items[0].productUrl;
         var link = $("<a>")
-          .attr({ href: productLink, target: "_blank" })
+          .attr({ href: productLink, target: "_blank" }).addClass("productlinkclick")
           .text("Go to product!");
         $("#prodBuy").append(link);
         // Pulls product description and displays on html
