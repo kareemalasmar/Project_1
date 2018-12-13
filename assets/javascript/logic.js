@@ -185,6 +185,24 @@ $(document).ready(function() {
     $("#productNotFoundContainer").hide();
   });
 
+  var clearButton2 = $("<button>");
+  clearButton2 .attr("id", "clearButton2").text("Clear");
+  $("#clearButtonHere2").append(clearButton2 );
+
+  // When Clear button2 is clicked it will empty all product info divs and hide entire section
+  $("#clearButton2").on("click", function() {
+    $("#prodName").empty();
+    $("#prodPrice").empty();
+    $("#prodImage").empty();
+    $("#prodBuy").empty();
+    $("#prodDescription").empty();
+    $("#prodRatingStars").empty();
+    $("#prodRating").empty();
+    $("#prodVideo").empty();
+    $("#productContainer").hide();
+    $("#productNotFoundContainer").hide();
+  });
+
   // When any button with class "product-button" is clicked it will run our Display function
   $(document).on("click", ".product-button", displayProductData);
 
