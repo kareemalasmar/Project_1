@@ -163,6 +163,7 @@ body{
      #bio {
        margin-top: 10px;
        margin-bottom: 5px;
+       text-align: center;
      }
 
      /* Put cute fonts we got from google fonts */
